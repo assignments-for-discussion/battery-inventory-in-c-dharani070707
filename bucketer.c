@@ -9,6 +9,7 @@ struct CountsByUsage {
 
 struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
   int i;
+  int c1=0,c2=0,c3=0;
   for(i=0;i<nBatteries;i++)
   {
     if(cycles[i] <400)

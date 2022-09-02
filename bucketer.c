@@ -8,7 +8,17 @@ struct CountsByUsage {
 };
 
 struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
-  struct CountsByUsage counts = {2, 3, 1};
+  int i;
+  for(i=0;i<nBatteries;i++)
+  {
+    if(cycles[i] <400)
+      c1++;
+    else if(cycles[i]>=400 && cycles[i]<919)
+      c2++;
+    else if(cycles[i]>=920)
+      c3++;
+  }
+  struct CountsByUsage counts= {c1, c2, c3};
   return counts;
 }
 
